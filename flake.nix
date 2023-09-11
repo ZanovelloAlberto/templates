@@ -2,10 +2,10 @@
   description = "A collection of flake templates";
   inputs = {
     temps.url = "github:Nixos/templates";
-    monomer.url = "github:ZanovelloAlberto/nommer";
+    nommer.url = "github:ZanovelloAlberto/nommer";
   };
 
-  outputs = { self, temps, monomer }: {
+  outputs = { self, temps, nommer}: {
 
     templates = {
       sc = temps.templates.simpleContainer;
@@ -13,7 +13,7 @@
       #   path = "github:Nixos/templateys/simple-container";
       #   description = "A NixOS container running apache-httpd";
       # };
-      monomer = monomer.defaultTemplate;
+      nommer = nommer.templates.default;
       c = {
         path = ./c;
         description = "lll";
