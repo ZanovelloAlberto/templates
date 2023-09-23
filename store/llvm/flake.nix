@@ -47,21 +47,20 @@
             pkgs = import nixpkgs { inherit system; };
           in
           {
-            default = pkgs.nuenv.mkDerivation {
+            default = pkgs.clangStdenv.mkDerivation {
 
               name = "ciao";
-              build
 
-                };
-                # inherit (nixpkgsFor.${system}) hello;
-                });
+            };
+            # inherit (nixpkgsFor.${system}) hello;
+          });
 
-                # The default package for 'nix build'. This makes sense if the
-                # flake provides only one package or there is a clear "main"
-                # package.
+      # The default package for 'nix build'. This makes sense if the
+      # flake provides only one package or there is a clear "main"
+      # package.
 
-                # A NixOS module, if applicable (e.g. if the package provides a system service).
+      # A NixOS module, if applicable (e.g. if the package provides a system service).
 
 
-                };
-                }
+    };
+}
