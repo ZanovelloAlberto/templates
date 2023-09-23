@@ -13,7 +13,7 @@
       #   path = "github:Nixos/templateys/simple-container";
       #   description = "A NixOS container running apache-httpd";
       # };
-      nommer = nommer.templates.default;
+      # nommer = nommer.templates.default;
       c = {
         path = ./c;
         description = "lll";
