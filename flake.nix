@@ -9,9 +9,6 @@
 
     templates =
       let
-        src = builtins.filterSource
-          (path: type: type == "directory")
-          ./store;
 
         filterDir = name: value: value == "directory";
         due = nixpkgs.lib.filterAttrs filterDir (builtins.readDir ./store);
@@ -32,6 +29,13 @@
         nommer = {
           path = nommer.outPath;
           description = "";
+        };
+
+        sokol = {
+          c = { path = ./sokol/clang; };
+          rust = { path = ./sokol/rust; };
+          nim = { path = ./sokol/nim; };
+          path = ./sokol;
         };
 
       };

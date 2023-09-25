@@ -1,7 +1,5 @@
 {
-  description = "An over-engineered Hello World in C";
-
-  # Nixpkgs / NixOS version to use.
+  description = "ok base bro";
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-23.05";
@@ -9,9 +7,6 @@
   };
   outputs = { self, nixpkgs, flake-utils }:
 
-
-
-    # A Nixpkgs overlay.
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
@@ -26,8 +21,7 @@
       in
       {
         packages = rec {
-          hello = pkgs.hello;
-          default = hello;
+          default = der;
         };
         devShells.default = der;
       }
