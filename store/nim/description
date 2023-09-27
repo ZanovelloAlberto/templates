@@ -1,0 +1,9 @@
+
+
+help and reference:
+- https://discourse.nixos.org/t/nim-dependency-unable-to-be-found/26445
+- nim_builder:
+	https://github.com/NixOS/nixpkgs/blob/564bb91432a5c68b13bbdb19c87a9e65ab97fb52/pkgs/development/nim-packages/nim_builder/nim_builder.nim#L100
+- https://stackoverflow.com/questions/74103005/nitter-build-using-nim-inside-nix-environment-cannot-access-ssl-certs/74104812#74104812
+- nimble2nix:
+	https://github.com/bandithedoge/nimble2nix

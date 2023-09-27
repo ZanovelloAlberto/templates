@@ -10,6 +10,10 @@ pkgs.rustPlatform.buildRustPackage rec {
       "sokol-0.1.0" = "sha256-KWi+u9drlakTSuK50mo25fVBQpEqwWD07FvIZ0RvQ40=";
     };
   };
+  checkFlags = [
+    # reason for disabling test
+    # "-O"
+  ];
   src = pkgs.lib.cleanSource ./.;
   buildInputs = with pkgs; [
     xorg.libXi
