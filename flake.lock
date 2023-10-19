@@ -1,0 +1,165 @@
+{
+  "nodes": {
+    "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1681202837,
+        "narHash": "sha256-H+Rh19JDwRtpVPAWp64F+rlEtxUWBAQW28eAi3SRSzg=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "cfacdce06f30d2b68473a46042957675eebb3401",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1695318763,
+        "narHash": "sha256-FHVPDRP2AfvsxAdc+AsgFJevMz5VBmnZglFUMlxBkcY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "e12483116b3b51a185a33a272bf351e357ba9a99",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1694304580,
+        "narHash": "sha256-5tIpNodDpEKT8mM/F5zCzWEAnidOg8eb1/x3SRaaBLs=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4c8cf44c5b9481a4f093f1df3b8b7ba997a7c760",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-23.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
+        "narHash": "sha256-5tIpNodDpEKT8mM/F5zCzWEAnidOg8eb1/x3SRaaBLs=",
+        "rev": "4c8cf44c5b9481a4f093f1df3b8b7ba997a7c760",
+        "revCount": 490740,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.2305.490740+rev-4c8cf44c5b9481a4f093f1df3b8b7ba997a7c760/018a8028-06c2-7dda-a0ad-6a9561752aa2/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/NixOS/nixpkgs/0.2305.*.tar.gz"
+      }
+    },
+    "nommer": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2",
+        "nuenv": "nuenv"
+      },
+      "locked": {
+        "lastModified": 1694439794,
+        "narHash": "sha256-ItCh/JKYycg/emSprTx86TA3RZX0sdv/VQsiIUDrDU4=",
+        "owner": "ZanovelloAlberto",
+        "repo": "nommer",
+        "rev": "f0c45e18a32b25b21708ac0f2e0090e1bb0f066c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ZanovelloAlberto",
+        "repo": "nommer",
+        "type": "github"
+      }
+    },
+    "nuenv": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3",
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1694189778,
+        "narHash": "sha256-T7SeYWsIloih6R4Q/K9qRHXqufQsx8PSJ+15Flvk/wk=",
+        "owner": "DeterminateSystems",
+        "repo": "nuenv",
+        "rev": "757041dad0d6fadefbf96303a89783dac5164923",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DeterminateSystems",
+        "repo": "nuenv",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "nommer": "nommer",
+        "temps": "temps"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "nommer",
+          "nuenv",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1694139063,
+        "narHash": "sha256-M2dhhe6IzHmS0zQkmnzbcG98jEQGZ4UcS3VcT+rG/Do=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "46dbbcaf435b0d22b149684589b9b059f73f4ffc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "temps": {
+      "locked": {
+        "lastModified": 1691421369,
+        "narHash": "sha256-Agfum0ykpUxUUS4AKYPVSWF+NeHPWay2o1TTNH0BFXA=",
+        "owner": "Nixos",
+        "repo": "templates",
+        "rev": "0fb94bf87144b18e42765693c3e15ac5f17eeab0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Nixos",
+        "repo": "templates",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

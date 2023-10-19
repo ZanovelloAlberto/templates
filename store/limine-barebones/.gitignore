@@ -1,0 +1,9 @@
+/limine
+/ovmf
+*.iso
+*.hdd
+**/obj
+**/bin
+
+iso_root
+ovfm

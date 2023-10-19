@@ -1,0 +1,21 @@
+# Specify the compiler and its flags
+CXX = g++
+CXXFLAGS = -Wall -O2
+
+# Define build rules for individual source files
+rule compile
+  command = $CXX $CXXFLAGS -c $in -o $out
+  description = Compiling $in
+
+# Define the build rule for the executable
+rule link
+  command = $CXX $CXXFLAGS $in -o $out
+  description = Linking $out
+
+# Specify the targets and their dependencies
+build main.o: compile main.cpp
+build second.o: compile second.cpp
+build myapp: link main.o second.o
+
+# Default target to build when 'ninja' is run
+default myapp
