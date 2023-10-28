@@ -1,0 +1,11 @@
+it kinda work
+- it build the webview c 
+- it build the webpage client
+- i package the server ts file 
+
+
+problem: 
+- deno chan bind (pass) js/ts function to  webview
+	- it dont give good error
+
+- right approach 

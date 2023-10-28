@@ -1,0 +1,8 @@
+{
+    "deno.enable": true,
+    "deno.lint": true,
+    "deno.unstable": true,
+    
+    "deno.include": ["src/deno/**/*"],
+    "deno.exclude": ["node_modules", "**/*.spec.ts"]
+}
