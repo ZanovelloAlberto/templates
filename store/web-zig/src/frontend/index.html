@@ -1,0 +1,53 @@
+<html>
+
+<body>
+    <script>console.log("si     ")
+
+        // var memory = new WebAssembly.Memory({
+        //     // See build.zig for reasoning
+        //     initial: 2 /* pages */,
+        //     maximum: 2 /* pages */,
+        // });
+        // var importObject = {
+        //     env: {
+        //         consoleLog: (arg) => console.log(arg), // Useful for debugging on zig's side
+        //         memory: memory,
+        //     },
+        // };
+        var memory = new WebAssembly.Memory({
+            // See build.zig for reasoning
+            initial: 2 /* pages */,
+            maximum: 2 /* pages */,
+        });
+
+        var importObject = {
+            env: {
+                console : {
+                i : 11,
+                log: (arg, arg2) => console.log(arg, arg2), // Useful for debugging on zig's side
+                },
+                consoleLog: (arg, arg2) => console.log(arg, arg2), // Useful for debugging on zig's side
+                memory: memory,
+            },
+        };
+        console.log("perche");
+
+        WebAssembly.instantiateStreaming(fetch("main.wasm"), importObject).then((result) => {
+            const c = result.instance.exports.add(3, 2);
+            console.log(c)
+        });
+
+// WebAssembly.instantiate(fetch("main.wasm"), {}).then((result)=>{
+//     const wasmMemoryArray = new Uint8Array(memory.buffer);
+
+//     const bufferOffset = result.instance.exports.getCheckerboardBufferPointer();
+
+//     console.log("loaded")
+//     console.log(get(1,4))
+// })
+         // \\ var ws = new WebSocket("ws://localhost:3010/chat");
+    </script>
+    <h1>This is a simple Websocket chatroom example</h1>
+</body>
+
+</html>
