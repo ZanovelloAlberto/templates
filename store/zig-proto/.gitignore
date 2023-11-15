@@ -2,3 +2,4 @@ result
 target
 zig-out
 zig-build
+src/proto

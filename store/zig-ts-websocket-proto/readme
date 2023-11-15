@@ -1,0 +1,10 @@
+it does:
+- serve websocket server
+- serve site server
+- client:
+	- run zig wasm:
+
+it does not:
+	- interoperate zig/js
+	- support zig/wasm websocket  
+

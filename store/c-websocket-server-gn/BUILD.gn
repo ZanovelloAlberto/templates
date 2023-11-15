@@ -1,0 +1,30 @@
+executable("main") {
+  print(configs)
+  sources = [ "src/main.c" ]
+
+  cflags = [
+    "-Wall",
+    "-O2",
+  ]  
+  # deps = [
+  #   ":hello_shared",
+  #   ":hello_static",
+  # ]
+
+}
+
+ shared_library("hello_shared") {
+   sources = [
+     "src/hello_shared.cc",
+     "src/hello_shared.h",
+   ]
+
+  defines = [ "HELLO_SHARED_IMPLEMENTATION" ]
+}
+
+static_library("hello_static") {
+   sources = [
+     "src/hello_static.cc",
+     "src/hello_static.h",
+   ]
+}

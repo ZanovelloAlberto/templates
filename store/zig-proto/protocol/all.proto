@@ -1,13 +1,15 @@
 syntax = "proto3";
 package ok;
 
+enum PersonType {
+  STUDENT = 0;
+  TEACHER = 1;
+  STAFF = 2;
+}
 
 message Person {
   string name = 1;
   int32 age = 2;
-  // repeated string email = 3;
+  PersonType type = 3;  // Enum field
 }
 
-message AddressBook {
-  repeated Person people = 1;
-}

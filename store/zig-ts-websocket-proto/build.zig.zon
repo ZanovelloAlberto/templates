@@ -1,0 +1,16 @@
+.{
+    .name = "My example project",
+    .version = "0.0.1",
+
+    .dependencies = .{
+        // zap v0.1.14-pre
+        .zap = .{
+            .url = "https://github.com/zigzap/zap/archive/refs/tags/v0.1.14-pre.tar.gz",
+            .hash = "122067d12bc7abb93f7ce623f61b94cadfdb180cef12da6559d092e6b374202acda3",
+        },
+        .protobuf = .{
+            .url = "https://github.com/Arwalk/zig-protobuf/archive/ea5b5885930059c0661d076ea70b1761fe0eee8f.tar.gz",
+            .hash = "1220d226686f6023fae80156c729382295c672d6ffaa746d2932d73f16bd9affc758",
+        },
+    }
+}

@@ -1,0 +1,5 @@
+cd web
+tsc --outDir out web/main.ts -t es5 --strict
+esbuild --bundle --minify web/main.js > ../src/out.js
+cd ..
+zig build run 
