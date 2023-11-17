@@ -1,5 +1,5 @@
 { pkgs ? import <nixpkgs> { } }:
-pkgs.stdenv.mkDerivation rec {
+pkgs.clangStdenv.mkDerivation rec {
   pname = "ok";
   version = "0.1.1";
   buildInputs = with pkgs;[
@@ -21,10 +21,10 @@ pkgs.stdenv.mkDerivation rec {
   iStb = "`pkg-config --cflags stb`";
   # title = "ok";
   shellHook = ''
-    sway assign [title=${pname}] workspace 3
+    swaymsg assign [title=$pname] workspace 4
     start(){
-    echo ${buildPhase}
-      nodemon -e c,glsl,h --exec "rm a.out; ${buildPhase} ./a.out; echo build failed..." 
+      mesonConfigurePhase
+      nodemon -e c,glsl,h,cpp -w ../src --exec "rm ./$1; ninja -C . && ./$1 ; echo build failed..." 
     }
 
   '';
