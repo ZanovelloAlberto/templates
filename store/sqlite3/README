@@ -1,0 +1,22 @@
+this will crate a "test" table with some fields
+
+$ sqlite3 test.sl3
+SQLite version 3.8.7.2 2014-11-18 20:57:56
+Enter ".help" for usage hints.
+sqlite> create table test (test_id integer primary key);
+sqlite> insert into test values (1);
+sqlite> select * from test;
+1
+.quit
+
+
+
+
+
+
+
+
+
+
+REFERENCES:
+https://stackoverflow.com/questions/28024810/how-we-can-save-database-created-in-sqlite3
